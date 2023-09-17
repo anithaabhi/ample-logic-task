@@ -1,0 +1,25 @@
+<div>
+    <div class="form-card">
+        <form [formGroup]="signupform" (ngSubmit)="signup()">
+            <h2 class="text-center my-3 pb-3">SignUp</h2>
+            <div class="form-group mb-4 mt-3">
+                <input type="text" class="form-control"  placeholder="username" formControlName="username">
+            </div>
+            
+            <div class="form-group mb-4 mt-3">
+                <input type="email" class="form-control" placeholder="email" formControlName="email">
+            </div>
+
+            <div class="form-group mb-4 mt-3">
+                <input type="number" class="form-control" placeholder="mobile" formControlName="mobile">
+            </div>
+            
+            <div class="form-group mb-4">
+            <input type="password" class="form-control" placeholder="password" formControlName="password">
+            </div>
+
+            <div class="text-center"><button class="btn btn-light my-3 text-center"  [disabled]="!signupform.valid">SignUp</button></div>
+            <p class="text-center text-white"><a routerLink="/login" class="text-white">Alreadyuser? LOGIN</a></p>
+        </form>
+    </div>
+</div>
